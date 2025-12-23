@@ -142,9 +142,7 @@ export const AboutPage: React.FC = () => {
               <div>
                 <label className="block text-xs font-bold uppercase text-gray-500 mb-2">{t('about.hobbies')}</label>
                 <div className="flex flex-wrap gap-2">
-                  <span className="bg-cream border-2 border-black px-3 py-1 font-bold flex items-center gap-2 hover:-translate-y-1 transition-transform cursor-default">
-                    💻 {t('about.hobby.coding')}
-                  </span>
+
                   <span className="bg-cream border-2 border-black px-3 py-1 font-bold flex items-center gap-2 hover:-translate-y-1 transition-transform cursor-default">
                     🎮 {t('about.hobby.game')}
                   </span>
