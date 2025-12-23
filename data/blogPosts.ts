@@ -6,7 +6,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Java OOP: Từ lý thuyết suông đến thực chiến đồ án",
     excerpt: "Năm nhất tôi học 4 tính chất OOP như vẹt. Đến năm 4 làm đồ án lớn, tôi mới hiểu tại sao Interface và Abstract Class lại cứu rỗi cuộc đời mình.",
     category: "JAVA",
-    date: "15 Th11, 2023",
+    date: "23/12/2025",
     imageUrl: "https://picsum.photos/800/400?random=101",
     content: `
       <p class="mb-4">Hồi năm nhất, thầy dạy: <em>"OOP có 4 tính chất: Đóng gói, Kế thừa, Đa hình, Trừu tượng"</em>. Tôi gật gù, học thuộc lòng để đi thi qua môn. Lúc đó tôi nghĩ: "Vẽ vời ra class làm gì cho mệt, viết hết vào hàm main chạy cho nhanh".</p>
@@ -39,7 +39,7 @@ public class VipDiscount implements DiscountStrategy { ... }
     title: "Tạm biệt Callback Hell: Cách tôi chinh phục Async/Await",
     excerpt: "Hồi mới học JS, tôi lồng 5 cái callback vào nhau và gọi đó là nghệ thuật. Giờ nhìn lại chỉ muốn đập bàn phím. Cùng bàn về Promise nhé.",
     category: "JAVASCRIPT",
-    date: "12 Th11, 2023",
+    date: "23/12/2025",
     imageUrl: "https://picsum.photos/800/400?random=102",
     content: `
       <p class="mb-4">Javascript là một ngôn ngữ kỳ cục. Hồi mới học, tôi muốn lấy dữ liệu user, sau đó lấy bài viết của user đó, rồi lấy comment của bài viết đó.</p>
@@ -81,7 +81,7 @@ async function loadData() {
     title: "Spring Boot: Dependency Injection giải thích cho sinh viên",
     excerpt: "Đừng định nghĩa nó bằng thuật ngữ sách vở nữa. Hãy tưởng tượng Spring Container như một 'bà mẹ' lo hết việc chuẩn bị đồ đạc cho bạn đi học.",
     category: "JAVA",
-    date: "05 Th11, 2023",
+    date: "23/12/2025",
     imageUrl: "https://picsum.photos/800/400?random=103",
     content: `
       <p class="mb-4">Dependency Injection (DI) và Inversion of Control (IoC). Hai thuật ngữ nghe rất "kêu" và rất đáng sợ với sinh viên năm 2, năm 3.</p>
@@ -107,7 +107,7 @@ private B b;
     title: "Tại sao đồ án tốt nghiệp tôi chọn TypeScript thay vì JS?",
     excerpt: "Code JS rất vui cho đến khi bạn nhận ra 'undefined is not a function' ngay lúc demo cho giảng viên. TypeScript hơi khó chịu, nhưng nó an toàn.",
     category: "JAVASCRIPT",
-    date: "30 Th10, 2023",
+    date: "23/12/2025",
     imageUrl: "https://picsum.photos/800/400?random=104",
     content: `
       <p class="mb-4">JavaScript là ngôn ngữ của tự do. Bạn có thể gán số cho chuỗi, gán object cho mảng, JS gật đầu hết. Nhưng tự do quá thì dễ... đi tù (về mặt bugs).</p>
@@ -133,7 +133,7 @@ private B b;
     title: "NullPointerException: Người bạn thân thiết (và đáng ghét)",
     excerpt: "Kẻ thù số 1 của mọi Java Dev. Chia sẻ kinh nghiệm xương máu về việc check null và sử dụng Optional trong Java 8 để code bớt 'rác'.",
     category: "JAVA",
-    date: "24 Th10, 2023",
+    date: "23/12/2025",
     imageUrl: "https://picsum.photos/800/400?random=105",
     content: `
       <p class="mb-4">Nếu có giải thưởng cho lỗi gây ức chế nhất lịch sử Java, tôi xin bầu chọn cho <code>java.lang.NullPointerException</code> (NPE).</p>
@@ -168,7 +168,7 @@ return Optional.ofNullable(user)
     title: "React Hooks: useEffect đã 'lừa' tôi như thế nào?",
     excerpt: "Vòng lặp vô tận (Infinite Loop) là món đặc sản khi mới học React. Cùng mổ xẻ dependency array để không làm treo trình duyệt nữa.",
     category: "JAVASCRIPT",
-    date: "18 Th10, 2023",
+    date: "23/12/2025",
     imageUrl: "https://picsum.photos/800/400?random=106",
     content: `
       <p class="mb-4">Chuyển từ Class Component sang Functional Component với Hooks là một bước ngoặt. Nhưng <code>useEffect</code> thực sự là một cái bẫy với những tấm chiếu mới.</p>
@@ -192,7 +192,7 @@ return Optional.ofNullable(user)
     title: "Java Stream API: Viết code ngắn hơn, trông 'ngầu' hơn",
     excerpt: "Thay vì viết vòng lặp for dài 10 dòng để lọc danh sách, tôi dùng Stream API chỉ tốn 1 dòng. Nhưng cẩn thận, nó khó debug lắm đấy.",
     category: "JAVA",
-    date: "10 Th10, 2023",
+    date: "23/12/2025",
     imageUrl: "https://picsum.photos/800/400?random=107",
     content: `
       <p class="mb-4">Trước Java 8, xử lý Collections là cực hình. Ví dụ: Tìm tên các sinh viên trên 20 tuổi và sắp xếp theo tên.</p>
@@ -218,7 +218,7 @@ List<String> result = students.stream()
     title: "JavaScript: 3 năm rồi tôi vẫn nhầm lẫn từ khóa 'this'",
     excerpt: "Arrow function vs Regular function. Tại sao context của 'this' lại nhảy lung tung? Một bài viết tự nhắc nhở bản thân trước khi đi phỏng vấn.",
     category: "JAVASCRIPT",
-    date: "01 Th10, 2023",
+    date: "23/12/2025",
     imageUrl: "https://picsum.photos/800/400?random=108",
     content: `
       <p class="mb-4">Trong Java, <code>this</code> luôn là instance của class hiện tại. Rất trung thành. Trong JavaScript, <code>this</code> là một gã trai hư, thay đổi tùy theo "hoàn cảnh" (execution context).</p>
@@ -244,7 +244,7 @@ setTimeout(() => {
     title: "Cú lừa về Garbage Collection: Nó không dọn ngay lập tức",
     excerpt: "Hồi mới học Java, tôi tưởng cứ gán null là RAM được giải phóng ngay. Thực tế phức tạp hơn nhiều. Tìm hiểu sâu hơn về JVM nào.",
     category: "JAVA",
-    date: "28 Th09, 2023",
+    date: "23/12/2025",
     imageUrl: "https://picsum.photos/800/400?random=109",
     content: `
       <p class="mb-4">Hồi năm 2 học môn Hệ điều hành, tôi cứ nghĩ Java có bộ thu gom rác (Garbage Collector - GC) thì mình cứ xả rác thoải mái, nó sẽ dọn ngay.</p>
