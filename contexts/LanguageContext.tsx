@@ -12,7 +12,10 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const translations = {
   vi: {
+    'common.name': 'Nguyễn Hữu Tịnh',
+
     // NavBar
+    'nav.home': 'Trang chủ',
     'nav.about': 'Giới thiệu',
     'nav.blog': 'Bài viết',
     'nav.projects': 'Dự án',
@@ -26,9 +29,12 @@ export const translations = {
     
     // About Page
     'about.title': 'Về Tôi',
+    'about.myname': 'Nguyễn Hữu Tịnh',
+    'about.sticker': 'SINH VIÊN IT',
     'about.name': 'Họ Tên',
     'about.birthYear': 'Năm sinh',
     'about.hometown': 'Quê quán',
+    'about.hometown.val': 'Tỉnh Phú Yên cũ',
     'about.hometown.note': '(Hiện nay đã gộp chung với tỉnh Đắk Lắk)',
     'about.connect': 'Kết nối với tôi',
     'about.hobbies': 'Sở thích',
@@ -80,7 +86,10 @@ export const translations = {
     'footer.copyright': '© 2024 Nguyễn Hữu Tịnh',
   },
   en: {
+    'common.name': 'Nguyen Huu Tinh',
+
     // NavBar
+    'nav.home': 'Home',
     'nav.about': 'About',
     'nav.blog': 'Blog',
     'nav.projects': 'Projects',
@@ -94,9 +103,12 @@ export const translations = {
     
     // About Page
     'about.title': 'About Me',
+    'about.myname': 'Nguyen Huu Tinh',
+    'about.sticker': 'IT STUDENT',
     'about.name': 'Full Name',
     'about.birthYear': 'Birth Year',
     'about.hometown': 'Hometown',
+    'about.hometown.val': 'Old Phu Yen Province',
     'about.hometown.note': '(Now merged with Dak Lak province)',
     'about.connect': 'Connect with me',
     'about.hobbies': 'Hobbies',
@@ -133,7 +145,7 @@ export const translations = {
 
     // Blog Grid
     'blog.latest': 'Latest Posts',
-    'blog.archive': 'ARCHIVE // 2023',
+    'blog.archive': 'Latest Posts',
     'blog.readMore': 'Read Article',
     'blog.header.archive': 'Blog Archives',
     'blog.header.desc': 'Sharing knowledge about Frontend, Design, and Life',

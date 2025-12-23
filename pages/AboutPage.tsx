@@ -78,14 +78,14 @@ export const AboutPage: React.FC = () => {
                         />
                     </div>
                     {/* Sticker trang trí */}
-                    <div className="absolute -bottom-2 -right-2 bg-accent text-white text-xs font-bold px-2 py-1 border-2 border-black rotate-12 z-20">
-                        IT STUDENT
+                    <div className="absolute -bottom-2 -right-2 bg-accent text-white text-xs font-bold px-2 py-1 border-2 border-black rotate-12 z-20 uppercase">
+                        {t('about.sticker')}
                     </div>
                 </div>
                 
                 <div className="flex-1 pt-2">
                      <label className="block text-xs font-bold uppercase text-gray-500 mb-1">{t('about.name')}</label>
-                     <div className="text-2xl md:text-3xl font-black font-mono uppercase text-dark leading-none mb-4">Nguyễn Hữu Tịnh</div>
+                     <div className="text-2xl md:text-3xl font-black font-mono uppercase text-dark leading-none mb-4">{t('about.myname')}</div>
                      
                      <label className="block text-xs font-bold uppercase text-gray-500 mb-1">{t('about.birthYear')}</label>
                      <div className="text-xl font-black font-mono">2004</div>
@@ -96,7 +96,7 @@ export const AboutPage: React.FC = () => {
               <div>
                 <label className="block text-xs font-bold uppercase text-gray-500 mb-1">{t('about.hometown')}</label>
                 <div className="text-lg font-bold leading-tight">
-                   Tỉnh Phú Yên cũ <br/>
+                   {t('about.hometown.val')} <br/>
                   <span className="text-sm font-normal bg-yellow-200 px-1 border border-black italic inline-block mt-1">{t('about.hometown.note')}</span>
                 </div>
               </div>

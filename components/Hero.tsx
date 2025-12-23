@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         <h1 className="font-black text-dark uppercase flex flex-col items-start gap-4">
           <span className="text-5xl md:text-6xl leading-none">{t('hero.greeting')}</span>
           <span className="text-4xl md:text-6xl bg-white px-5 py-4 border-2 border-black shadow-hard-sm leading-normal tracking-tight">
-            NGUYỄN HỮU TỊNH
+            {t('common.name')}
           </span>
         </h1>
         

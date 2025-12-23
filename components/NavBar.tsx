@@ -29,6 +29,7 @@ export const NavBar: React.FC<NavBarProps> = ({ onNavigate, currentPage }) => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6 font-bold">
+          <button onClick={() => onNavigate('home')} className={getLinkClass('home')}>{t('nav.home')}</button>
           <button onClick={() => onNavigate('about')} className={getLinkClass('about')}>{t('nav.about')}</button>
           <button onClick={() => onNavigate('blog')} className={getLinkClass('blog')}>{t('nav.blog')}</button>
           <button onClick={() => onNavigate('projects')} className={getLinkClass('projects')}>{t('nav.projects')}</button>
