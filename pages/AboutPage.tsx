@@ -88,8 +88,16 @@ export const AboutPage: React.FC = () => {
                   <label className="block text-xs font-bold uppercase text-gray-500 mb-1">{t('about.name')}</label>
                   <div className="text-2xl md:text-3xl font-black font-mono uppercase text-dark leading-none mb-4">{t('about.myname')}</div>
 
-                  <label className="block text-xs font-bold uppercase text-gray-500 mb-1">{t('about.birthYear')}</label>
-                  <div className="text-xl font-black font-mono">2004</div>
+                  <div className="flex gap-8 mb-4">
+                    <div>
+                      <label className="block text-xs font-bold uppercase text-gray-500 mb-1">{t('about.birthYear')}</label>
+                      <div className="text-xl font-black font-mono">2004</div>
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold uppercase text-gray-500 mb-1">{t('about.nickname')}</label>
+                      <div className="text-xl font-black font-mono bg-yellow-300 inline-block px-2 border border-black transform -rotate-1 shadow-sm leading-tight py-1">{t('about.nickname.val')}</div>
+                    </div>
+                  </div>
                 </div>
               </div>
               {/* --- HẾT PHẦN AVATAR --- */}
@@ -134,6 +142,9 @@ export const AboutPage: React.FC = () => {
               <div>
                 <label className="block text-xs font-bold uppercase text-gray-500 mb-2">{t('about.hobbies')}</label>
                 <div className="flex flex-wrap gap-2">
+                  <span className="bg-cream border-2 border-black px-3 py-1 font-bold flex items-center gap-2 hover:-translate-y-1 transition-transform cursor-default">
+                    💻 {t('about.hobby.coding')}
+                  </span>
                   <span className="bg-cream border-2 border-black px-3 py-1 font-bold flex items-center gap-2 hover:-translate-y-1 transition-transform cursor-default">
                     🎮 {t('about.hobby.game')}
                   </span>

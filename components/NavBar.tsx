@@ -20,7 +20,7 @@ export const NavBar: React.FC<NavBarProps> = ({ onNavigate, currentPage }) => {
     <nav className="sticky top-0 z-50 bg-cream border-b-2 border-black px-4 py-4 shadow-hard">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo Area */}
-        <div 
+        <div
           onClick={() => onNavigate('home')}
           className="cursor-pointer text-2xl font-black uppercase tracking-tighter border-2 border-black bg-white px-3 py-1 shadow-hard-sm transform -rotate-2 hover:rotate-0 transition-transform"
         >
@@ -32,19 +32,19 @@ export const NavBar: React.FC<NavBarProps> = ({ onNavigate, currentPage }) => {
           <button onClick={() => onNavigate('home')} className={getLinkClass('home')}>{t('nav.home')}</button>
           <button onClick={() => onNavigate('about')} className={getLinkClass('about')}>{t('nav.about')}</button>
           <button onClick={() => onNavigate('blog')} className={getLinkClass('blog')}>{t('nav.blog')}</button>
-          <button onClick={() => onNavigate('projects')} className={getLinkClass('projects')}>{t('nav.projects')}</button>
+
         </div>
 
         {/* CTA & Lang Switch */}
         <div className="hidden md:flex items-center gap-4">
-          <button 
+          <button
             onClick={toggleLanguage}
             className="w-10 h-10 flex items-center justify-center font-black border-2 border-black bg-white shadow-hard-sm hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-none transition-all"
             title="Switch Language"
           >
             {language === 'vi' ? 'EN' : 'VN'}
           </button>
-          
+
           <Button variant={ButtonVariant.PRIMARY} onClick={() => onNavigate('contact')}>
             {t('nav.contact')}
           </Button>
@@ -52,7 +52,7 @@ export const NavBar: React.FC<NavBarProps> = ({ onNavigate, currentPage }) => {
 
         {/* Mobile Menu Icon (Placeholder) */}
         <div className="flex gap-4 md:hidden">
-          <button 
+          <button
             onClick={toggleLanguage}
             className="w-10 h-10 flex items-center justify-center font-black border-2 border-black bg-white shadow-hard-sm active:translate-y-[1px] active:translate-x-[1px] active:shadow-none"
           >

@@ -36,9 +36,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         </div>
 
         <div className="flex flex-wrap gap-4 pt-2">
-          <Button variant={ButtonVariant.OUTLINE} onClick={() => onNavigate('projects')}>
-            {t('hero.viewPortfolio')}
-          </Button>
+
         </div>
       </div>
 

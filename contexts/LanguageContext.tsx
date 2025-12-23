@@ -20,18 +20,20 @@ export const translations = {
     'nav.blog': 'Bài viết',
     'nav.projects': 'Dự án',
     'nav.contact': 'Liên hệ',
-    
+
     // Hero
     'hero.status': 'Sẵn sàng nhận dự án',
     'hero.greeting': 'CHÀO, TÔI LÀ',
     'hero.bio': 'Tôi là một lập trình viên Frontend quan tâm đến code sạch, thiết kế brutalist và mì siêu cay.',
     'hero.viewPortfolio': 'Xem Portfolio',
-    
+
     // About Page
     'about.title': 'Về Tôi',
     'about.myname': 'Nguyễn Hữu Tịnh',
     'about.sticker': 'SINH VIÊN IT',
     'about.name': 'Họ Tên',
+    'about.nickname': 'Biệt danh',
+    'about.nickname.val': 'Tũn',
     'about.birthYear': 'Năm sinh',
     'about.hometown': 'Quê quán',
     'about.hometown.val': 'Tỉnh Phú Yên cũ',
@@ -39,6 +41,7 @@ export const translations = {
     'about.connect': 'Kết nối với tôi',
     'about.hobbies': 'Sở thích',
     'about.hobby.game': 'Chơi Game',
+    'about.hobby.coding': 'Code Frontend',
     'about.hobby.music': 'Nghe Nhạc',
     'about.hobby.movie': 'Xem Phim',
     'about.pros': 'Ưu điểm',
@@ -46,7 +49,7 @@ export const translations = {
     'about.cons': 'Nhược điểm',
     'about.cons.val': 'LƯỜI',
     'about.cons.alert': 'CẦN CAFFEINE',
-    'about.intro': 'Tôi không chỉ viết code, tôi giải quyết vấn đề. Hiện tại là sinh viên năm 4, tôi tin rằng một sản phẩm tốt phải là sự cân bằng hoàn hảo giữa thẩm mỹ và hiệu năng.',
+    'about.intro': 'Chào bạn, mình là Tịnh! Hiện là sinh viên năm 4 chuyên ngành CNPM tại ĐH HUTECH. Mình đã học tập và sinh sống tại TP.HCM được gần 4 năm, luôn theo đuổi sự cân bằng giữa tư duy logic và cảm xúc thẩm mỹ (UI/UX).',
     'about.skills': 'Kỹ Năng Vũ Khí',
     'about.journey': 'Hành Trình',
     'about.journey.student4': 'Sinh viên năm 4',
@@ -68,7 +71,7 @@ export const translations = {
     'contact.submit': 'GỬI TIN NHẮN 🚀',
     'contact.placeholder.name': 'VD: Nguyễn Văn A',
     'contact.placeholder.msg': 'Hãy viết gì đó...',
-    
+
     // Blog Grid
     'blog.latest': 'Bài viết mới nhất',
     'blog.archive': 'LƯU TRỮ // 2023',
@@ -94,18 +97,20 @@ export const translations = {
     'nav.blog': 'Blog',
     'nav.projects': 'Projects',
     'nav.contact': 'Contact',
-    
+
     // Hero
     'hero.status': 'Open to work',
     'hero.greeting': 'HELLO, I AM',
     'hero.bio': 'I am a Frontend Developer who cares about clean code, brutalist design, and super spicy noodles.',
     'hero.viewPortfolio': 'View Portfolio',
-    
+
     // About Page
     'about.title': 'About Me',
     'about.myname': 'Nguyen Huu Tinh',
     'about.sticker': 'IT STUDENT',
     'about.name': 'Full Name',
+    'about.nickname': 'Nickname',
+    'about.nickname.val': 'Tun',
     'about.birthYear': 'Birth Year',
     'about.hometown': 'Hometown',
     'about.hometown.val': 'Old Phu Yen Province',
@@ -113,6 +118,7 @@ export const translations = {
     'about.connect': 'Connect with me',
     'about.hobbies': 'Hobbies',
     'about.hobby.game': 'Gaming',
+    'about.hobby.coding': 'Frontend Coding',
     'about.hobby.music': 'Music',
     'about.hobby.movie': 'Movies',
     'about.pros': 'Pros',
@@ -120,7 +126,7 @@ export const translations = {
     'about.cons': 'Cons',
     'about.cons.val': 'LAZY',
     'about.cons.alert': 'NEED CAFFEINE',
-    'about.intro': 'I don\'t just write code, I solve problems. Currently a senior student, I believe a good product must be a perfect balance between aesthetics and performance.',
+    'about.intro': 'Hi, I\'m Tinh! A final-year Software Engineering student at HUTECH University. I have been living and studying in HCMC for nearly 4 years. I strive to balance logical problem-solving with aesthetic UI/UX storytelling.',
     'about.skills': 'Weapon Skills',
     'about.journey': 'The Journey',
     'about.journey.student4': 'Senior Student',
