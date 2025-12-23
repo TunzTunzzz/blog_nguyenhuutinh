@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import { Button } from './Button';
 import { ButtonVariant, Page } from '../types';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface HeroProps {
   onNavigate: (page: Page) => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
-  const [bio] = useState<string>("Tôi là một lập trình viên Frontend quan tâm đến code sạch, thiết kế brutalist và mì siêu cay.");
+  const { t } = useLanguage();
 
   return (
     <section className="flex flex-col md:flex-row items-center gap-12 py-12">
       <div className="flex-1 space-y-8">
-        <div className="inline-block bg-accent text-white font-bold px-3 py-1 border-2 border-black shadow-hard-sm">
-          Sẵn sàng nhận dự án
+        <div className="inline-block bg-accent text-white font-bold px-3 py-1 border-2 border-black shadow-hard-sm uppercase">
+          {t('hero.status')}
         </div>
         
         <h1 className="font-black text-dark uppercase flex flex-col items-start gap-4">
-          <span className="text-5xl md:text-6xl leading-none">CHÀO, TÔI LÀ</span>
+          <span className="text-5xl md:text-6xl leading-none">{t('hero.greeting')}</span>
           <span className="text-4xl md:text-6xl bg-white px-5 py-4 border-2 border-black shadow-hard-sm leading-normal tracking-tight">
             NGUYỄN HỮU TỊNH
           </span>
@@ -25,7 +26,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         
         <div className="bg-white border-2 border-black p-6 shadow-hard relative mt-4">
           <p className="text-xl font-medium leading-relaxed">
-            {bio}
+            {t('hero.bio')}
           </p>
           <div className="absolute -top-3 -right-3">
              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
         <div className="flex flex-wrap gap-4 pt-2">
           <Button variant={ButtonVariant.OUTLINE} onClick={() => onNavigate('projects')}>
-            Xem Portfolio
+            {t('hero.viewPortfolio')}
           </Button>
         </div>
       </div>

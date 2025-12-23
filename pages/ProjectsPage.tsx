@@ -1,8 +1,10 @@
 import React from 'react';
 import { Button } from '../components/Button';
 import { ButtonVariant } from '../types';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export const ProjectsPage: React.FC = () => {
+  const { t } = useLanguage();
   const projects = [
     {
       id: 1,
@@ -34,8 +36,8 @@ export const ProjectsPage: React.FC = () => {
     <div className="space-y-8 animate-fade-in">
       <div className="border-b-2 border-black pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-           <h2 className="text-4xl font-black uppercase mb-2">Dự Án Tiêu Biểu</h2>
-           <p className="text-lg">Những đứa con tinh thần tôi đã dành nhiều đêm thức trắng.</p>
+           <h2 className="text-4xl font-black uppercase mb-2">{t('projects.title')}</h2>
+           <p className="text-lg">{t('projects.subtitle')}</p>
         </div>
         <div className="font-mono bg-white border-2 border-black px-2 py-1 shadow-hard-sm text-sm">
           TOTAL: {projects.length}
@@ -78,8 +80,8 @@ export const ProjectsPage: React.FC = () => {
                   ))}
                 </div>
                 <div className="flex gap-2">
-                   <Button variant={ButtonVariant.PRIMARY} className="flex-1 text-sm py-1">Demo</Button>
-                   <Button variant={ButtonVariant.OUTLINE} className="flex-1 text-sm py-1">Code</Button>
+                   <Button variant={ButtonVariant.PRIMARY} className="flex-1 text-sm py-1">{t('projects.demo')}</Button>
+                   <Button variant={ButtonVariant.OUTLINE} className="flex-1 text-sm py-1">{t('projects.code')}</Button>
                 </div>
               </div>
             </div>

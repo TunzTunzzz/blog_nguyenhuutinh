@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
 import { ButtonVariant, Page } from '../types';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface NavBarProps {
   onNavigate: (page: Page) => void;
@@ -8,6 +9,8 @@ interface NavBarProps {
 }
 
 export const NavBar: React.FC<NavBarProps> = ({ onNavigate, currentPage }) => {
+  const { t, language, toggleLanguage } = useLanguage();
+
   const getLinkClass = (page: Page) => {
     const baseClass = "cursor-pointer hover:underline decoration-2 underline-offset-4 decoration-accent";
     return currentPage === page ? `${baseClass} underline decoration-accent` : baseClass;
@@ -26,24 +29,40 @@ export const NavBar: React.FC<NavBarProps> = ({ onNavigate, currentPage }) => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6 font-bold">
-          <button onClick={() => onNavigate('about')} className={getLinkClass('about')}>Giới thiệu</button>
-          <button onClick={() => onNavigate('blog')} className={getLinkClass('blog')}>Bài viết</button>
-          <button onClick={() => onNavigate('projects')} className={getLinkClass('projects')}>Dự án</button>
+          <button onClick={() => onNavigate('about')} className={getLinkClass('about')}>{t('nav.about')}</button>
+          <button onClick={() => onNavigate('blog')} className={getLinkClass('blog')}>{t('nav.blog')}</button>
+          <button onClick={() => onNavigate('projects')} className={getLinkClass('projects')}>{t('nav.projects')}</button>
         </div>
 
-        {/* CTA */}
-        <div className="hidden md:block">
+        {/* CTA & Lang Switch */}
+        <div className="hidden md:flex items-center gap-4">
+          <button 
+            onClick={toggleLanguage}
+            className="w-10 h-10 flex items-center justify-center font-black border-2 border-black bg-white shadow-hard-sm hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-none transition-all"
+            title="Switch Language"
+          >
+            {language === 'vi' ? 'EN' : 'VN'}
+          </button>
+          
           <Button variant={ButtonVariant.PRIMARY} onClick={() => onNavigate('contact')}>
-            Liên hệ
+            {t('nav.contact')}
           </Button>
         </div>
 
         {/* Mobile Menu Icon (Placeholder) */}
-        <button className="md:hidden border-2 border-black p-2 bg-white shadow-hard-sm active:translate-x-[1px] active:translate-y-[1px] active:shadow-none">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <div className="flex gap-4 md:hidden">
+          <button 
+            onClick={toggleLanguage}
+            className="w-10 h-10 flex items-center justify-center font-black border-2 border-black bg-white shadow-hard-sm active:translate-y-[1px] active:translate-x-[1px] active:shadow-none"
+          >
+            {language === 'vi' ? 'EN' : 'VN'}
+          </button>
+          <button className="border-2 border-black p-2 bg-white shadow-hard-sm active:translate-x-[1px] active:translate-y-[1px] active:shadow-none">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
     </nav>
   );

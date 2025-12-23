@@ -5,6 +5,7 @@ export interface BlogPost {
   category: string;
   date: string;
   imageUrl: string;
+  content: string; // HTML string
 }
 
 export enum ButtonVariant {
