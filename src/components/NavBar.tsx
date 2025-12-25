@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
-import { ButtonVariant, Page } from '../types';
+import { ButtonVariant } from '../types';
+import type { Page } from '../types';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface NavBarProps {
@@ -20,19 +21,18 @@ export const NavBar: React.FC<NavBarProps> = ({ onNavigate, currentPage }) => {
     <nav className="sticky top-0 z-50 bg-cream border-b-2 border-black px-4 py-4 shadow-hard">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo Area */}
-        <div
-          onClick={() => onNavigate('home')}
-          className="cursor-pointer text-2xl font-black uppercase tracking-tighter border-2 border-black bg-white px-3 py-1 shadow-hard-sm transform -rotate-2 hover:rotate-0 transition-transform"
+        <a
+          href="/"
+          className="cursor-pointer text-2xl font-black uppercase tracking-tighter border-2 border-black bg-white px-3 py-1 shadow-hard-sm transform -rotate-2 hover:rotate-0 transition-transform block"
         >
           DEV.LOG
-        </div>
+        </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6 font-bold">
-          <button onClick={() => onNavigate('home')} className={getLinkClass('home')}>{t('nav.home')}</button>
-          <button onClick={() => onNavigate('about')} className={getLinkClass('about')}>{t('nav.about')}</button>
-          <button onClick={() => onNavigate('blog')} className={getLinkClass('blog')}>{t('nav.blog')}</button>
-
+          <a href="/" className={getLinkClass('home')}>{t('nav.home')}</a>
+          <a href="/about" className={getLinkClass('about')}>{t('nav.about')}</a>
+          <a href="/blog" className={getLinkClass('blog')}>{t('nav.blog')}</a>
         </div>
 
         {/* CTA & Lang Switch */}
@@ -45,9 +45,11 @@ export const NavBar: React.FC<NavBarProps> = ({ onNavigate, currentPage }) => {
             {language === 'vi' ? 'EN' : 'VN'}
           </button>
 
-          <Button variant={ButtonVariant.PRIMARY} onClick={() => onNavigate('contact')}>
-            {t('nav.contact')}
-          </Button>
+          <a href="/contact">
+            <Button variant={ButtonVariant.PRIMARY}>
+              {t('nav.contact')}
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Menu Icon (Placeholder) */}

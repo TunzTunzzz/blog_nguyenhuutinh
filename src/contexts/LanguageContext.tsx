@@ -1,4 +1,7 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
+import { useStore } from '@nanostores/react';
+import { languageStore, toggleLanguage } from '../stores/languageStore';
 
 type Language = 'vi' | 'en';
 
@@ -166,28 +169,25 @@ export const translations = {
 };
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('vi');
+  return <>{children}</>;
+};
 
-  const toggleLanguage = () => {
-    setLanguage(prev => prev === 'vi' ? 'en' : 'vi');
-  };
+export const useLanguage = () => {
+  const storeLanguage = useStore(languageStore);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Force 'vi' on first render to match server HTML (SSR)
+  // After mount, switch to storeLanguage (which may be 'en' from localStorage)
+  const language = isMounted ? storeLanguage : 'vi';
 
   const t = (key: string): string => {
     // @ts-ignore
     return translations[language][key] || key;
   };
 
-  return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
-      {children}
-    </LanguageContext.Provider>
-  );
-};
-
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
+  return { language, toggleLanguage, t };
 };

@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Hero } from '../components/Hero';
+import { BlogGrid } from '../components/BlogGrid';
+import { BLOG_POSTS } from '../data/blogPosts';
+
+const dummyNavigate = () => {};
+---
+
+<Layout>
+	<Hero client:load onNavigate={dummyNavigate} />
+	<BlogGrid client:load posts={BLOG_POSTS.slice(0, 6)} />
+</Layout>

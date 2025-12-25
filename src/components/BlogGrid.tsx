@@ -1,5 +1,6 @@
 import React from 'react';
-import { ButtonVariant, BlogPost } from '../types';
+import { ButtonVariant } from '../types';
+import type { BlogPost } from '../types';
 import { Button } from './Button';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -34,23 +35,26 @@ export const BlogGrid: React.FC<BlogGridProps> = ({ posts, onPostClick }) => {
 
             <div className="p-6 flex flex-col flex-grow">
               <span className="text-xs font-mono text-gray-500 mb-2 block">{post.date}</span>
-              <h3
-                className="text-2xl font-bold mb-3 leading-tight hover:text-accent cursor-pointer line-clamp-2"
-                onClick={() => onPostClick && onPostClick(post.id)}
-              >
-                {post.title}
-              </h3>
+              <a href={`/blog/${post.id}`} className="block">
+                <h3
+                  className="text-2xl font-bold mb-3 leading-tight hover:text-accent cursor-pointer line-clamp-2"
+                >
+                  {post.title}
+                </h3>
+              </a>
               <p className="text-gray-700 mb-6 flex-grow border-l-4 border-gray-200 pl-3 line-clamp-3">
                 {post.excerpt}
               </p>
 
-              <Button
-                variant={ButtonVariant.OUTLINE}
-                fullWidth
-                onClick={() => onPostClick && onPostClick(post.id)}
-              >
-                {t('blog.readMore')}
-              </Button>
+              <a href={`/blog/${post.id}`} className="block mt-auto">
+                <Button
+                  variant={ButtonVariant.OUTLINE}
+                  fullWidth
+                // Remove onClick to let the anchor tag handle navigation
+                >
+                  {t('blog.readMore')}
+                </Button>
+              </a>
             </div>
           </article>
         ))}

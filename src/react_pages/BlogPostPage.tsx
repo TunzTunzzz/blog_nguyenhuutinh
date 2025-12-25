@@ -1,25 +1,33 @@
 import React from 'react';
-import { BlogPost, ButtonVariant } from '../types';
+import { ButtonVariant } from '../types';
+import type { BlogPost } from '../types';
 import { Button } from '../components/Button';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface BlogPostPageProps {
   post: BlogPost;
-  onBack: () => void;
+  // onBack removed as we use direct link
 }
 
-export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
+export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
+  const { t } = useLanguage();
+  // Note: t might not be available if not wrapped in provider? 
+  // No, we switched to Nano Stores, so useLanguage hook works everywhere!
+
   return (
     <article className="animate-fade-in max-w-4xl mx-auto">
-      <Button variant={ButtonVariant.OUTLINE} onClick={onBack} className="mb-6">
-        ← Quay lại danh sách
-      </Button>
+      <a href="/blog" className="inline-block mb-6 no-underline">
+        <Button variant={ButtonVariant.OUTLINE}>
+          ← {t('blog.readMore').replace('Đọc bài viết', 'Quay lại').replace('Read Article', 'Back')}
+        </Button>
+      </a>
 
       <div className="bg-white border-2 border-black shadow-hard overflow-hidden">
         {/* Header Image */}
         <div className="h-64 md:h-96 w-full relative border-b-2 border-black">
-          <img 
-            src={post.imageUrl} 
-            alt={post.title} 
+          <img
+            src={post.imageUrl}
+            alt={post.title}
             className="w-full h-full object-cover"
           />
           <div className="absolute top-4 left-4 bg-accent text-white font-bold px-3 py-1 border-2 border-black shadow-hard-sm">
@@ -46,16 +54,16 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
             </div>
           </div>
 
-          <div 
+          <div
             className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:uppercase prose-p:text-gray-800 prose-img:border-2 prose-img:border-black prose-img:shadow-hard-sm"
             dangerouslySetInnerHTML={{ __html: post.content || "" }}
           />
-          
+
           <div className="mt-12 pt-8 border-t-2 border-black">
-             <div className="bg-cream border-2 border-black p-6 shadow-hard-sm">
-               <h4 className="font-bold uppercase mb-2">Lời tác giả</h4>
-               <p className="italic text-gray-700">"Bài viết dựa trên những trải nghiệm đau thương (và cả những lúc sướng điên người) khi code dạo. Nếu thấy sai sót, hãy nhẹ nhàng góp ý, đừng ném đá tội nghiệp sinh viên nghèo."</p>
-             </div>
+            <div className="bg-cream border-2 border-black p-6 shadow-hard-sm">
+              <h4 className="font-bold uppercase mb-2">Lời tác giả</h4>
+              <p className="italic text-gray-700">"Bài viết dựa trên những trải nghiệm đau thương (và cả những lúc sướng điên người) khi code dạo. Nếu thấy sai sót, hãy nhẹ nhàng góp ý, đừng ném đá tội nghiệp sinh viên nghèo."</p>
+            </div>
           </div>
         </div>
       </div>

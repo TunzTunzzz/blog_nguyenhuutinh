@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+import { NavBar } from '../components/NavBar';
+import { Footer } from '../components/Footer';
+
+// Get current path to highlight navbar
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname === '/' ? 'home' : pathname.replace('/', '');
+
+// Dummy navigate for compatibility (will refactor later)
+const dummyNavigate = () => {};
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Neo-Brutalist Blog" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Blog NguyenHuuTinh</title>
+	</head>
+	<body class="min-h-screen font-sans bg-cream text-dark flex flex-col">
+    <!-- Wrap React components with client:load to make them interactive -->
+		<NavBar 
+            client:load 
+            currentPage={currentPath as any} 
+            onNavigate={dummyNavigate} 
+        />
+		
+        <main class="container mx-auto px-4 py-8 flex-grow space-y-16">
+            <slot />
+        </main>
+
+		<Footer />
+	</body>
+</html>

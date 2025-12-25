@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from './Button';
-import { ButtonVariant, Page } from '../types';
+import { ButtonVariant } from '../types';
+import type { Page } from '../types';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface HeroProps {

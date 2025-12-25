@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { BlogPostPage } from '../../react_pages/BlogPostPage';
+import { BLOG_POSTS } from '../../data/blogPosts';
+
+export function getStaticPaths() {
+  return BLOG_POSTS.map(post => ({
+    params: { id: post.id.toString() },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<Layout>
+    <div class="container mx-auto">
+         <BlogPostPage client:load post={post} />
+    </div>
+</Layout>
