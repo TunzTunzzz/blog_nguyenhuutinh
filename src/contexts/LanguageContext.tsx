@@ -74,6 +74,12 @@ export const translations = {
     'contact.placeholder.name': 'VD: Nguyễn Văn A',
     'contact.placeholder.msg': 'Hãy viết gì đó...',
 
+    // Contact Options
+    'contact.subject.collab': 'Hợp tác dự án',
+    'contact.subject.recruit': 'Tuyển dụng',
+    'contact.subject.faq': 'Hỏi đáp chung',
+    'contact.subject.other': 'Khác',
+
     // Blog Grid
     'blog.latest': 'Bài viết mới nhất',
     'blog.archive': 'LƯU TRỮ // 2023',
@@ -149,6 +155,12 @@ export const translations = {
     'contact.submit': 'SEND MESSAGE 🚀',
     'contact.placeholder.name': 'Ex: John Doe',
     'contact.placeholder.msg': 'Write something...',
+
+    // Contact Options
+    'contact.subject.collab': 'Project Collaboration',
+    'contact.subject.recruit': 'Recruitment',
+    'contact.subject.faq': 'General Inquiry',
+    'contact.subject.other': 'Other',
 
     // Blog Grid
     'blog.latest': 'Latest Posts',
