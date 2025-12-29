@@ -32,6 +32,7 @@ export const NavBar: React.FC<NavBarProps> = ({ onNavigate, currentPage }) => {
         <div className="hidden md:flex items-center gap-6 font-bold">
           <a href="/" className={getLinkClass('home')}>{t('nav.home')}</a>
           <a href="/about" className={getLinkClass('about')}>{t('nav.about')}</a>
+          <a href="/projects" className={getLinkClass('projects')}>{t('nav.projects')}</a>
           <a href="/blog" className={getLinkClass('blog')}>{t('nav.blog')}</a>
         </div>
 

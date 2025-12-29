@@ -26,8 +26,8 @@ export const translations = {
 
     // Hero
     'hero.status': 'Sẵn sàng nhận dự án',
-    'hero.greeting': 'CHÀO, TÔI LÀ',
-    'hero.bio': 'Tôi là một lập trình viên Frontend quan tâm đến code sạch, thiết kế brutalist và mì siêu cay.',
+    'hero.greeting': 'XIN CHÀO, TÔI LÀ',
+    'hero.bio': '"Logic sẽ đưa bạn từ A đến B. Trí tưởng tượng sẽ đưa bạn đến mọi nơi."',
     'hero.viewPortfolio': 'Xem Portfolio',
 
     // About Page
@@ -42,6 +42,7 @@ export const translations = {
     'about.hometown.val': 'Tỉnh Phú Yên cũ',
     'about.hometown.note': '(Hiện nay đã gộp chung với tỉnh Đắk Lắk)',
     'about.connect': 'Kết nối với tôi',
+    'about.cv': 'Hồ sơ năng lực (CV)',
     'about.hobbies': 'Sở thích',
     'about.hobby.game': 'Chơi Game',
     'about.hobby.music': 'Nghe Nhạc',
@@ -109,7 +110,7 @@ export const translations = {
     // Hero
     'hero.status': 'Open to work',
     'hero.greeting': 'HELLO, I AM',
-    'hero.bio': 'I am a Frontend Developer who cares about clean code, brutalist design, and super spicy noodles.',
+    'hero.bio': '"Logic will get you from A to B. Imagination will take you everywhere."',
     'hero.viewPortfolio': 'View Portfolio',
 
     // About Page
@@ -124,6 +125,7 @@ export const translations = {
     'about.hometown.val': 'Old Phu Yen Province',
     'about.hometown.note': '(Now merged with Dak Lak province)',
     'about.connect': 'Connect with me',
+    'about.cv': 'Curriculum Vitae',
     'about.hobbies': 'Hobbies',
     'about.hobby.game': 'Gaming',
     'about.hobby.music': 'Music',

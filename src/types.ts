@@ -8,6 +8,28 @@ export interface BlogPost {
   content: string; // HTML string
 }
 
+export interface LocalizedString {
+  vi: string;
+  en: string;
+}
+
+export interface LocalizedArray {
+  vi: string[];
+  en: string[];
+}
+
+export interface Project {
+  id: number;
+  title: LocalizedString;
+  role: LocalizedString;
+  overview: LocalizedString;
+  key_tasks: LocalizedArray;
+  technologies: string[];
+  imageUrl: string;
+  demoUrl?: string;
+  codeUrl?: string;
+}
+
 export enum ButtonVariant {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
