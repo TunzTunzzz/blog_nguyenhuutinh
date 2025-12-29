@@ -83,7 +83,7 @@ export const translations = {
 
     // Blog Grid
     'blog.latest': 'Bài viết mới nhất',
-    'blog.archive': 'LƯU TRỮ // 2023',
+    'blog.archive': 'LƯU TRỮ // 2025',
     'blog.readMore': 'Đọc bài viết',
     'blog.header.archive': 'Lưu Trữ Blog',
     'blog.header.desc': 'Chia sẻ kiến thức về Frontend, Design và Cuộc sống',

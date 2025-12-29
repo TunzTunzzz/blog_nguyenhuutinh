@@ -43,7 +43,7 @@ export const ProjectsPage: React.FC = () => {
                 <img
                   src={project.imageUrl}
                   alt={project.title[language]}
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105"
+                  className="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-105"
                 />
 
                 {/* Tech Stack Pills Overlay */}
